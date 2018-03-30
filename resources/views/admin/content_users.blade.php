@@ -28,8 +28,8 @@
                         @if ( Auth::user()->role =="admin" )
                         <a href="{{route('usersEdit',($user->id))}}">{{$user->name}}</a>
                             @if(Auth::user()->id == $user->id)
-                                <span style="background: skyblue; color: #1d2124">
-                                        <a href="{{route('changePassword',['user'=>$user->id])}}">обновить пароль</a>
+                                <span class="badge" >
+                                        <a href="{{route('changePassword',['user'=>$user->id])}}" style="color: whitesmoke;">обновить пароль</a>
                                     </span>
                             @endif
 
